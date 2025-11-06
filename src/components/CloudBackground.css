@@ -1,0 +1,125 @@
+body {
+  background: #87CEEB; /* Light blue sky */
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.sky {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.cloud {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+}
+
+/* Cloud variations */
+.cloud-one {
+  width: 150px;
+  height: 50px;
+  top: 10%;
+  left: -20%;
+  animation: moveCloud 20s linear infinite;
+  animation-delay: 0s;
+}
+
+.cloud-one::before,
+.cloud-one::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.cloud-one::before {
+  width: 70px;
+  height: 70px;
+  top: -30px;
+  left: 20px;
+}
+
+.cloud-one::after {
+  width: 90px;
+  height: 90px;
+  top: -40px;
+  right: 10px;
+}
+
+.cloud-two {
+  width: 180px;
+  height: 60px;
+  top: 30%;
+  left: -30%;
+  animation: moveCloud 25s linear infinite;
+  animation-delay: 5s;
+}
+
+.cloud-two::before,
+.cloud-two::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.cloud-two::before {
+  width: 80px;
+  height: 80px;
+  top: -35px;
+  left: 30px;
+}
+
+.cloud-two::after {
+  width: 100px;
+  height: 100px;
+  top: -45px;
+  right: 15px;
+}
+
+.cloud-three {
+  width: 120px;
+  height: 40px;
+  top: 50%;
+  left: -15%;
+  animation: moveCloud 18s linear infinite;
+  animation-delay: 10s;
+}
+
+.cloud-three::before,
+.cloud-three::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.cloud-three::before {
+  width: 60px;
+  height: 60px;
+  top: -25px;
+  left: 15px;
+}
+
+.cloud-three::after {
+  width: 75px;
+  height: 75px;
+  top: -30px;
+  right: 5px;
+}
+
+/* Animation for cloud movement */
+@keyframes moveCloud {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100%));
+  }
+}
